@@ -1,3 +1,5 @@
+/* Huge parts */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +13,81 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Navbar CSS code */
+
+.NavbarLogo{
+  width: 210px;
+}
+
+.NavBar_Links_a{
+  color: #ff6060;
+  margin-right: 10px;
+  display: flex;
+  text-decoration: none;
+}
+
+.NavBar_Links_a:hover{
+  text-decoration: underline;
+}
+
+.NavbarLinks{
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Navbar{
+ display: flex;
+ justify-content: space-between;
+ padding: 30px 45px 30px 45px;
+}
+
+/* Footer CSS code */
+
+#FooterParent{
+  background-color: black;
+  height: 210px;
+}
+
+.FooterCopyright{
+  color: white;
+}
+
+/* HomePage CSS code */
+
+#HomePage{
+  height: 100%;
+  padding: 30px 45px 30px 45px;
+}
+
+#Banner img{
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#Banner {
+  position: relative;
+}
+
+.BannerImg {
+  position: relative;
+  filter: brightness(0.7);
+}
+
+.BannerTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 100%;
+  letter-spacing: 1.5px;
+  font-size: 48px;
+  font-weight: 500;
+}
+
