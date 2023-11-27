@@ -14,34 +14,63 @@ code {
     monospace;
 }
 
-/* Navbar CSS code */
+p{
+  font-family: Montserrat;
+}
 
+/* Navbar CSS code */
 .NavbarLogo{
-  width: 210px;
+  width: 145px;
+}
+@media screen and (min-width: 1024px) {
+  .NavbarLogo{
+    width: 210px;
+  }
 }
 
 .NavBar_Links_a{
   color: #ff6060;
-  margin-right: 10px;
   display: flex;
   text-decoration: none;
 }
-
+@media screen and (min-width: 1024px) {
+  .NavBar_Links_a{
+    color: #ff6060;
+    margin-right: 10px;
+    display: flex;
+    text-decoration: none;
+  }
+}
 .NavBar_Links_a:hover{
   text-decoration: underline;
 }
 
 .NavbarLinks{
+  display: flex;
+  width: 150px;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (min-width: 1024px) {
+  .NavbarLinks{
     display: flex;
     width: 150px;
     align-items: center;
     justify-content: space-between;
 }
+}
 
 .Navbar{
- display: flex;
- justify-content: space-between;
- padding: 30px 45px 30px 45px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+}
+@media screen and (min-width: 1024px) {
+  .Navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 45px 30px 45px;
+   }
 }
 
 /* Footer CSS code */
@@ -49,6 +78,16 @@ code {
 #FooterParent{
   background-color: black;
   height: 210px;
+}
+
+.FooterChild{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 30%;
+  align-items: center;
+  height: 100%;
 }
 
 .FooterCopyright{
@@ -59,15 +98,34 @@ code {
 
 #HomePage{
   height: 100%;
-  padding: 30px 45px 30px 45px;
+  padding: 0px 20px 0px 20px;
 }
+
+@media screen and (min-width: 1024px) {
+  #HomePage{
+    height: 100%;
+    padding: 30px 45px 30px 45px;
+  }
+}
+
 
 #Banner img{
   width: 100%;
-  height: 210px;
+  height: 150px;
   object-fit: cover;
   border-radius: 20px;
 }
+
+@media screen and (min-width: 1024px) {
+  #Banner img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}
+
+
 
 #Banner {
   position: relative;
@@ -78,6 +136,22 @@ code {
   filter: brightness(0.7);
 }
 
+
+
+.BannerTitle {
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+  width: 100%;
+  letter-spacing: 1.5px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
 .BannerTitle {
   position: absolute;
   top: 50%;
@@ -90,4 +164,268 @@ code {
   font-size: 48px;
   font-weight: 500;
 }
+}
 
+/* Gallery */
+
+.AllComponents{
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .AllComponents{
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    height: 100%;
+    background-color: #f6f6f6;
+}
+  }
+  .AllComponents2{
+    display: none;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .AllComponents2{
+      display: block;
+      border-radius: 20px 20px 0px 0px;
+      padding-bottom: 30px;
+      height: 100%;
+      background-color: #f6f6f6;
+  }
+  }
+.ListComponents{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 20px;
+
+}   
+@media screen and (min-width: 1024px) {
+.ListComponents{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 0px;
+}
+}
+.ListComponents a{
+width: 100%;
+}   
+@media screen and (min-width: 1024px) {
+  .ListComponents a{
+    width: 30%;
+    }   
+  }
+
+
+.lineComponents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .lineComponents{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+}
+
+
+.ComponentTitle{
+  position: absolute;
+  z-index: 2;
+  max-width: 260px;
+  margin-left: 10px;
+}
+.ComponentImg{
+  position: relative;
+}
+
+.Components h2{
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.Components img{
+  width: 100%;
+  filter: brightness(0.7);
+  border-radius: 8px;
+  height: 300px;
+  object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  .Components img{
+    width: 100%;
+    filter: brightness(0.7);
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+.Components{
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .Components{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+}
+
+.InsideComponents{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.InsideComponents p{
+  margin: 10px 10px 20px 16px;
+  color: white;
+  width: 100px;
+  text-align: left;
+}
+
+/* About Us */
+
+
+#AboutUsPage{
+  height: 100%;
+  padding: 0px 20px 0px 20px;
+}
+@media screen and (min-width: 1024px) {
+  #AboutUsPage{
+    height: 100%;
+    padding: 30px 45px 30px 45px;
+  }
+}
+
+.BannerAboutUs img{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .BannerAboutUs img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}
+
+.BannerAboutUs{
+  margin-bottom: 20px;
+}
+
+.dropdown{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* Tabs */
+
+
+.dropdown-container{
+  background-color: #ff6060;
+  color: #ff6060;
+  border-radius: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .dropdown-container{
+    margin: auto;
+    width: 85%;
+  }
+}
+
+
+.dropdown-option p{
+text-align: left;
+}
+
+.dropdown-content{
+  padding: 10px;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+}
+
+.dropdown-button{
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: none;
+}
+
+.DropDownTexte{
+  display: flex;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.DropDownTexte p{
+color: white;
+}
+
+
+/* page 404 */
+
+.Number404{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: Montserrat;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 137px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ff6060;
+}
+
+.Text404{
+  width: 80%;
+  margin: auto;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ff6060;
+  margin-bottom: 100px;
+}
+
+.HomeLink404 p{
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ff6060;
+  margin: auto;
+  width: 221px;
+  margin-bottom: 100px;
+}
+
+.HomeLink404Link{
+  text-decoration: none;
+}
