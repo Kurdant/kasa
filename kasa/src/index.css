@@ -190,6 +190,7 @@ p{
   @media screen and (min-width: 1024px) {
     .AllComponents2{
       display: block;
+      width: 100%;
       border-radius: 20px 20px 0px 0px;
       padding-bottom: 30px;
       height: 100%;
@@ -205,9 +206,11 @@ p{
 }   
 @media screen and (min-width: 1024px) {
 .ListComponents{
+  flex-flow: wrap;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+  flex-flow: wrap;
   margin-top: 0px;
 }
 }
@@ -228,6 +231,7 @@ width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .lineComponents{
+    
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -240,6 +244,8 @@ width: 100%;
   z-index: 2;
   max-width: 260px;
   margin-left: 10px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .ComponentImg{
   position: relative;
@@ -269,6 +275,9 @@ width: 100%;
     border-radius: 8px;
     object-fit: cover;
   }
+  .Components a{
+    width: 100%;
+  }
 }
 
 .Components{
@@ -282,7 +291,7 @@ width: 100%;
   .Components{
     display: flex;
     flex-direction: column-reverse;
-    width: 100%;
+    width: 30%;
   }
 }
 
@@ -301,10 +310,30 @@ width: 100%;
 }
 
 /* About Us */
+/* Ajoutez ces styles dans votre fichier CSS ou dans votre composant React */
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+    transition: 1s;
+  }
+  to {
+    max-height: 200px; /* ajustez la hauteur maximale selon vos besoins */
+    opacity: 1;
+  }
+}
+.dropdown.slideDown {
+  animation: slideDown 0.3s ease-in-out; /* ajustez la durée de l'animation selon vos besoins */
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease; /* ajustez la durée de transition selon vos besoins */
+}
 
 
 #AboutUsPage{
-  height: 100%;
+  height: 130vw;
   padding: 0px 20px 0px 20px;
 }
 @media screen and (min-width: 1024px) {
@@ -429,3 +458,64 @@ color: white;
 .HomeLink404Link{
   text-decoration: none;
 }
+
+/* FicheLogement */
+#FicheLogementParents{
+  margin: auto;
+  width: 90%;
+  height: 400px;
+}
+
+
+
+.FicheLogementTitle h1{
+  color: #ff6060;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.FicheLogementTitle p{
+  color: #ff6060;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.FicheLogementTagsParents{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+.FicheLogementTags {
+  background-color: #ff6060;
+  width: 28%;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+.FicheLogementTags p{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    color: white;
+}
+
+
+.FicheLogement2Part{
+
+}
+.FicheLogementPFP{
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+
