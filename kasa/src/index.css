@@ -243,6 +243,7 @@ width: 100%;
   position: absolute;
   z-index: 2;
   max-width: 260px;
+  margin-top: 225px;
   margin-left: 10px;
   display: flex;
   flex-direction: column-reverse;
@@ -333,7 +334,7 @@ width: 100%;
 
 
 #AboutUsPage{
-  height: 130vw;
+  height: auto;
   padding: 0px 20px 0px 20px;
 }
 @media screen and (min-width: 1024px) {
@@ -373,47 +374,59 @@ width: 100%;
 
 /* Tabs */
 
+.dropdown-menu{
+  margin-bottom: 25px;
+}
 
-.dropdown-container{
+.dropdown-header{
+  display: flex;
+  justify-content: space-between;
   background-color: #ff6060;
-  color: #ff6060;
+  height: 45px;
   border-radius: 10px;
 }
-@media screen and (min-width: 1024px) {
-  .dropdown-container{
-    margin: auto;
-    width: 85%;
-  }
-}
 
-
-.dropdown-option p{
-text-align: left;
-}
-
-.dropdown-content{
-  padding: 10px;
-  background-color: #f6f6f6;
-  border-radius: 5px;
-}
-
-.dropdown-button{
-  height: 50px;
-  width: 50px;
-  border: none;
-  background: none;
-}
-
-.DropDownTexte{
+.dropdown-header span{
   display: flex;
-  position: absolute;
+  align-items: center;
   margin-left: 10px;
+  color: white;
 }
 
-.DropDownTexte p{
-color: white;
+.arrow {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out; /* Ajout de la transition */
 }
 
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrow.open {
+  transform: rotate(0deg); /* Rotation de 180° au clic */
+}
+
+.dropdown-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  padding: 0px 10px 0px 10px;
+  background-color: #f6f6f6;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.dropdown-content p {
+  color: #ff6060;
+}
+
+.dropdown-menu.open .dropdown-content {
+  height: auto; 
+}
 
 /* page 404 */
 
@@ -463,17 +476,19 @@ color: white;
 #FicheLogementParents{
   margin: auto;
   width: 90%;
-  height: 400px;
+  height: auto;
 }
 
-
+.FicheLogementNotes{
+  font-size: 30px;
+  align-self: center;
+}
 
 .FicheLogementTitle h1{
   color: #ff6060;
   font-family: Montserrat;
   font-size: 36px;
   font-weight: 500;
-  line-height: 51px;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -482,21 +497,24 @@ color: white;
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
-  line-height: 51px;
   letter-spacing: 0em;
   text-align: left;
 }
-.FicheLogementTagsParents{
+.FicheLogementTags{
   display: flex;
-  justify-content: space-around;
-  width: 80%;
+  justify-content: left;
+  width: 100%;
+  flex-wrap: wrap;
 }
-.FicheLogementTags {
+.LogementTags {
   background-color: #ff6060;
-  width: 28%;
+  padding: 0px 5px;
+  width: auto;
   height: 30px;
   text-align: center;
+  margin-right: 20px;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 .FicheLogementTags p{
   display: flex;
@@ -509,8 +527,30 @@ color: white;
 
 
 .FicheLogement2Part{
-
+  display: flex;
+  justify-content: space-between;
 }
+@media screen and (min-width: 1024px) {
+  .FicheLogement2Part{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+  }
+}
+
+.FicheLogementNamePicture{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FicheLogementNamePicture p{
+  width: 50%;
+  line-height: 20px ;
+  text-align: end;
+  margin-right:20px;
+  color: #ff6060;
+}
+
 .FicheLogementPFP{
   object-fit: cover;
   width: 60px;
@@ -518,4 +558,78 @@ color: white;
   border-radius: 50px;
 }
 
+@media screen and (min-width: 1024px) {
+  .Part1And2Parent{
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
+#LogementBanner{
+  display: flex;
+  width: 100%;
+
+}
+
+.BannerCliquable{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 255px;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .BannerCliquable{
+    height: 400px;
+  }
+}
+
+.BannerCliquable img{
+  width: 88%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.LogementBannerButton{
+   height: 100%;
+   background-color: transparent;
+   border: none;
+   color: white;
+}
+
+.previous{
+  margin-right: -60px ;
+  z-index: 2;
+}
+
+.after{
+  left: 83%;
+  margin-left: -60px ;
+}
+
+#logementDescription{
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  #logementDescription{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .DropdownOther{
+    width: 48%;
+  }
+
+}
+
+.Previous_Arrow{
+  transform: rotate(0deg);
+  margin-left: -10px;
+}
+
+.After_Arrow{
+  transform: rotate(180deg);
+  margin-right: -10px;
+}
