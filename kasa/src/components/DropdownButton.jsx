@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Arrow from '../img/Arrow_Kasa.png'
-
+import Arrow from '../img/Arrow_Kasa.png';
 
 const DropdownButton = (props) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -14,11 +13,20 @@ const DropdownButton = (props) => {
       <div className="dropdown-header">
         <span>{props.Title}</span>
         <div className={`arrow ${isDropdownOpen ? 'open' : ''}`} onClick={toggleDropdown}>
-        <img src={Arrow} alt="" />
+          <img src={Arrow} alt="" />
         </div>
       </div>
       <div className="dropdown-content">
-        <p>{props.Text}</p>
+        {props.Text && (
+          <p>{props.Text}</p>
+        )}
+        {props.equipement && (
+          <ul>
+            {props.equipement.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Banner from '../components/FicheLogementBanner';
 import houses from '../houses.json';
 import { useParams } from 'react-router-dom';
-import DropdownButtonLogement from '../components/DropDownLogement';
 import HouseRating from '../components/RatingStar';
-import DropDownLogemetnEquipement from '../components/DropDownLogemetnEquipement';
+import Page_404 from './Page_404';
+import DropdownButton from '../components/DropdownButton';
 
 
 const Fiche_Logement = () => {
@@ -17,7 +17,7 @@ const Fiche_Logement = () => {
   }, [id]);
 
   if (!house) {
-    return <div>Loading...</div>;
+    return <Page_404/>;
   }
 
   return (
@@ -49,8 +49,12 @@ const Fiche_Logement = () => {
           </div>
         </div>
         <div id='logementDescription'>
-          <DropdownButtonLogement />
-          <DropDownLogemetnEquipement />
+        <div className='DropDownParents'>
+          <DropdownButton Title="Equipements" Text={house.description} className="DropDown_Fiche"/>
+          </div>
+          <div className='DropDownParents'>
+          <DropdownButton Title="Description" equipement={house.equipments} className="DropDown_Fiche"/>
+          </div>
         </div>
         <div>
         </div>

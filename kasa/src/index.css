@@ -379,7 +379,12 @@ width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .dropdown-menu{
-    width: 85%;
+    width: 90%;
+  }
+  .DropDownParents{
+    display: flex;
+    width: 50%;
+    justify-content: center;
   }
 }
 
@@ -429,6 +434,15 @@ width: 100%;
   padding: 0px 10px 0px 10px;
   background-color: #f6f6f6;
   border-radius: 5px 5px 5px 5px;
+}
+
+.dropdown-content li{
+  list-style-type: none;
+  color: #ff6060;
+}
+
+.dropdown-content ul{
+ padding-left: 0;
 }
 
 .dropdown-content p {
