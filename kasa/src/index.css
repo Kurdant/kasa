@@ -377,13 +377,24 @@ width: 100%;
 .dropdown-menu{
   margin-bottom: 25px;
 }
+@media screen and (min-width: 1024px) {
+  .dropdown-menu{
+    width: 85%;
+  }
+}
+
+#Dropdown_parent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .dropdown-header{
   display: flex;
   justify-content: space-between;
   background-color: #ff6060;
   height: 45px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .dropdown-header span{

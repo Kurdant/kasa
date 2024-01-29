@@ -3,11 +3,11 @@ import { useLocation } from 'react-router-dom';
 import houses from '../houses.json';
 import Arrow from '../img/Arrow_Kasa.png'
 
-const DropdownButtonLogement = (props) => {
+const DropdownButtonLogement = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [description, setDescription] = useState('');
   const location = useLocation();
-  const houseId = location.pathname.split('/').pop(); // Obtient l'ID de la dernière partie de l'URL
+  const houseId = location.pathname.split('/').pop(); 
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);

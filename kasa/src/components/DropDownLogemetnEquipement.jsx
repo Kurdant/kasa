@@ -3,12 +3,11 @@ import { useLocation } from 'react-router-dom';
 import houses from '../houses.json';
 import Arrow from '../img/Arrow_Kasa.png'
 
-
 const DropdownButtonEquipement = (props) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [equipments, setEquipments] = useState([]);
   const location = useLocation();
-  const houseId = location.pathname.split('/').pop(); // Obtient l'ID de la dernière partie de l'URL
+  const houseId = location.pathname.split('/').pop();
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -17,7 +16,7 @@ const DropdownButtonEquipement = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const houseData = houses.find(h => h.id === houseId);
+        const houseData = houses.find((h) => h.id === houseId);
 
         if (houseData) {
           setEquipments(houseData.equipments || []);
@@ -39,7 +38,9 @@ const DropdownButtonEquipement = (props) => {
         </div>
       </div>
       <div className="dropdown-content">
-        <p>{equipments}</p>
+        {equipments.map((equipment, index) => (
+          <p key={index}>{equipment}</p>
+        ))}
       </div>
     </div>
   );
